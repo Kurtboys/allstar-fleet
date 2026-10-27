@@ -87,10 +87,10 @@ footer{text-align:center;color:var(--mute);font-size:14px;margin-top:22px}
 
       <div class="f"><label class="l" for="truck">Truck number</label><input type="text" id="truck" name="truck_number" required autocomplete="off"></div>
       <div class="f row">
-        <div><label class="l" for="day">Day</label><input type="date" id="day" name="desired_day" required></div>
-        <div><label class="l" for="time">Time</label><input type="time" id="time" name="desired_time" required></div>
+        <div><label class="l" for="day">Desired day</label><input type="date" id="day" name="desired_day" required></div>
+        <div><label class="l" for="time">Desired time</label><input type="time" id="time" name="desired_time" required></div>
       </div>
-      <div class="f"><label class="l" for="loc">Where is the truck?</label><input type="text" id="loc" name="location" required placeholder="Address or job site"></div>
+      <div class="f"><label class="l" for="loc">Where do you want the job done?</label><input type="text" id="loc" name="location" required placeholder="Address or job site"></div>
       <div class="f row">
         <div><label class="l" for="name">Your name</label><input type="text" id="name" name="name" required autocomplete="name"></div>
         <div><label class="l" for="phone">Your phone</label><input type="tel" id="phone" name="phone" required autocomplete="tel"></div>
@@ -118,9 +118,9 @@ document.getElementById('req').addEventListener('submit',async e=>{
     "Service": svc.join(', '),
     "Other details": v('other') || '-',
     "Truck number": v('truck'),
-    "Day": v('day'),
-    "Time": v('time'),
-    "Location": v('loc'),
+    "Desired day": v('day'),
+    "Desired time": v('time'),
+    "Job location": v('loc'),
     "Driver name": v('name'),
     "Driver phone": v('phone'),
     _subject: 'MacDonald-Miller service request: Truck ' + v('truck'),
