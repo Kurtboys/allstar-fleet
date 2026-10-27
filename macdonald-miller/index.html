@@ -124,7 +124,6 @@ document.getElementById('req').addEventListener('submit',async e=>{
     "Driver name": v('name'),
     "Driver phone": v('phone'),
     _subject: 'MacDonald-Miller service request: Truck ' + v('truck'),
-    _cc: 'kennewickinfo@callallstar.com',
     _template: 'table',
     _captcha: 'false'
   };
@@ -136,7 +135,7 @@ document.getElementById('req').addEventListener('submit',async e=>{
     f.style.display='none'; document.getElementById('done').classList.add('show');
   }catch(err){
     const body=Object.entries(data).filter(([k])=>!k.startsWith('_')).map(([k,x])=>k+': '+x).join('\n');
-    location.href='mailto:kennewickinfo@callallstar.com,kurtisb@callallstar.com?subject='+encodeURIComponent(data._subject)+'&body='+encodeURIComponent(body);
+    location.href='mailto:kurtisb@callallstar.com?subject='+encodeURIComponent(data._subject)+'&body='+encodeURIComponent(body);
     btn.disabled=false; btn.textContent='Send request';
   }
 });
